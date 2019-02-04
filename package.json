@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "restore": "dotnet restore src/App.fsproj",
+    "paket:mono": "mono .paket/paket.exe install",
+    "paket": ".paket/paket.exe install",
+    "win:install": "yarn run restore && yarn run paket",
+    "nix:install": "yarn run restore && yarn run paket:mono"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "fable-compiler": "^2.1.3",
+    "fable-loader": "^2.1.0",
+    "jquery": "^3.3.1",
+    "npx": "^10.2.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
